@@ -1,0 +1,14 @@
+---
+layout: default
+title: Mike Peiman
+---
+{% include hello.html %}
+
+<div id="home">
+  <h1>Mike Peiman</h1>
+  <ul class="posts">
+    {% for post in site.posts %}
+      <li><span class="post-date">{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
