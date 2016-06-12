@@ -1,11 +1,78 @@
+$base-background: #052545;
+$base-font-color: #def;
+$base-border: #3399ff;
 
 body {
-    background: #777;
+    background: $base-background;
     margin: 5em;
 }
 .posts span {
-	color: #3399ff;
+	color: #ddeeff;
 }
 h1 {
-	color: #ff99ff;
+	color: $base-font-color;
 }
+section {
+	background: adjust-color($base-background, $hue: 30deg, $lightness: 50);
+	color: adjust-color($base-font-color, $lightness: -20);
+	border: 5px solid #333;
+	padding: 1em;
+}
+
+
+.flex-container {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+    align-items: space-between;
+}
+		
+ 
+.flex-items-default {
+    width: 100px;
+    height: 250px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 0;
+}
+		
+ .flex-item-header {
+    width: 100%;
+    height: 400px;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 800px;
+}
+	
+ .flex-item-gallery-small {
+    height: 250px;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 100px;
+    padding: 0.5em;
+    border: 5px solid #999;
+    background: adjust-color($base-background, $hue: 30deg, $lightness: 50);
+}
+	
+ .flex-item-gallery-medium  {
+    height: 350px;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 200px;
+    padding: 0.5em;
+    border: 5px solid #bbb;
+    background: adjust-color($base-background, $hue: 60deg, $lightness: 50);
+}
+	
+ .flex-item-gallery-large  {
+    height: 450px;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 300px;
+    padding: 0.5em;
+    border: 5px solid #fff;
+    background: adjust-color($base-background, $hue: 90deg, $lightness: 50);
+}
+	
