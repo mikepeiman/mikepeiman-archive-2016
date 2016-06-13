@@ -51,7 +51,7 @@ gulp.task('jade', function() {
 gulp.task('sass', function () {
     return gulp.src('_scss/main.scss')
         .pipe(sass({
-            includePaths: ['scss', '_scss']
+            includePaths: ['scss', '_scss'],
             onError: browserSync.notify
         }))
         .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
