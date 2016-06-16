@@ -19,6 +19,15 @@ gulp.task('jekyll-build', function (done) {
         .on('close', done);
 });
 
+// Images
+gulp.task('images', function() {
+  return gulp.src('images/**/*')
+   // .pipe(cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
+   // .pipe(livereload(server))
+    .pipe(gulp.dest('_site/images'))
+   // .pipe(notify({ message: 'Images task complete' }));
+});
+
 /**
  * Rebuild Jekyll & do page reload
  */

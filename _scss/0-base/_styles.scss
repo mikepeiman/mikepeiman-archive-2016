@@ -1,109 +1,121 @@
-$base-background: #052545;
-$base-font-color: #def;
-$base-border: #3399ff;
+$base-background-color: #052545;
+$base-font-color: #ddeeff;
+$base-border-color: #3399ff;
+$item-background: hsla($hue: 190deg, $saturation: 50, $lightness: 50, $alpha: 0.5);
+$item-border-color: hsla($hue: 280deg, $saturation: 50, $lightness: 50, $alpha: 0.5);
+$item-border-width: 5px;
+$hue-amount: 20;
+$grad: linear-gradient(330deg, #e05252 0%, #99e052 25%, #52e0e0 50%, #9952e0 75%, #e05252 100%);
+
+@import url(//fonts.googleapis.com/css?family=Oswald:400,700,300|Bitter:400,700|Inconsolata:400,700|Lato:400|Cinzel+Decorative:400,700);
+@import url(//fonts.googleapis.com/css?family=Oswald:400,700,300|Neuton:400,700|Arapey:400|Lobster+Two:400,700|Josefin+Sans:400,700|Cinzel+Decorative:400,700|Titillium-Web:400,700|Alegreya+Sans:400,700);
 
 body {
-    background: $base-background;
-    margin: 5em;
+    background: url("/images/Black-Background-Wood-Clean-2560x1600-by-Freeman-dappled.jpg") center center no-repeat #111;
+    background-size: cover;
+    margin: 0em;
 }
 .posts span {
 	color: #ddeeff;
 }
-h1 {
-	color: $base-font-color;
+.center {
+	text-align: center;
 }
+h1 {
+	font-family:  'Neuton', 'Lobster Two', 'Arapey', 'Alegreya Sans', 'Cinzel Decorative', sans-serif;
+	font-weight: 700;
+	font-size: 5em;
+	color: white;
+}
+h2 {
+  	font-size: 5em;
+	color: white;
+	font-family: 'Lato', 'Josefin Sans', 'Bitter', 'Inconsolata', sans-serif;
+	align-self: center;
+	font-weight: 400;
+}
+h3 {
+	font-size: 1.5vw;
+	color: #999;
+	font-family:  'Inconsolata', sans-serif;
+	align-self: center;
+	font-weight: 400;
+}
+.mike-peiman {
+	font-size: 7.5vw;
+	color: #e0eaef;
+    text-shadow: 0px 0px 10px #9952e0;
+    align-self: center;
+    margin-top: 0.75em;
+    margin-bottom: 0;
+}
+.hero-h2 {
+  background: linear-gradient(330deg, #e05252 0%, #99e052 25%, #52e0e0 50%, #9952e0 75%, #e05252 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 3.75vw;
+  margin-bottom: 2.25em;
+  border-bottom: 5px solid $grad;
+}
+.sexy-line { 
+    margin: 0;
+    height: 5px;
+    background: black;
+    background: linear-gradient(90deg, #e05252 0%, #99e052 25%, #52e0e0 50%, #9952e0 75%, #e05252 100%);
+}
+@media only screen and (max-width: 480px) {
+  .mike-peiman {
+    font-size: 12vw;
+  }
+  .hero-h2 {
+    font-size: 7.25vw;
+    margin-bottom: 10vh;
+  }
+  .nav-item {
+  	width: 100%;
+  }
+  .flex-topnav {
+  	flex-wrap: wrap;
+  }
+}
+
 section {
-	background: adjust-color($base-background, $hue: 30deg, $lightness: 50);
+	background: adjust-color($base-background-color, $hue: 30deg, $lightness: 50);
 	color: adjust-color($base-font-color, $lightness: -20);
 	border: 5px solid #333;
 	padding: 1em;
 }
-
-
-.flex-container {
-    display:flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-content: center;
-    align-items: space-between;
-}
-		
- 
-.flex-items-default {
-    width: 100px;
-    height: 250px;
-    flex-grow: 0;
-    flex-shrink: 0;
-    flex-basis: 0;
-}
-		
- .flex-item-header {
-    width: 100%;
-    height: 400px;
-    flex-grow: 1;
-    flex-shrink: 0;
-    flex-basis: 800px;
-}
-	
- .flex-item-gallery-small {
-    height: 250px;
-    flex-grow: 1;
-    flex-shrink: 0;
-    flex-basis: 100px;
-    padding: 0.5em;
-    border: 5px solid #999;
-    background: adjust-color($base-background, $hue: 30deg, $lightness: 50);
-}
-	
- .flex-item-gallery-medium  {
-    height: 350px;
-    flex-grow: 1;
-    flex-shrink: 0;
-    flex-basis: 200px;
-    padding: 0.5em;
-    border: 5px solid #bbb;
-    background: adjust-color($base-background, $hue: 60deg, $lightness: 50);
-}
-	
- .flex-item-gallery-large  {
-    height: 450px;
-    flex-grow: 1;
-    flex-shrink: 0;
-    flex-basis: 300px;
-    padding: 0.5em;
-    border: 5px solid #fff;
-    background: adjust-color($base-background, $hue: 90deg, $lightness: 50);
-}
-h1 {
-  font-size: 8vw;
-}
-
-.hero-h1 {
-  background: linear-gradient(330deg, #e05252 0%, #99e052 25%, #52e0e0 50%, #9952e0 75%, #e05252 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-size: 5.5vw;
-}
-@media only screen and (max-width: 500px) {
-  h1 {
-    font-size: 12vw;
-  }
-  .hero-h1 {
-    font-size: 8vw;
-  }
-}
-.parent-row {
+.flex-topnav {
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
   justify-content: space-around;
+  align-items: stretch;
+  align-content: stretch;
 }
-.parent-column {
+.flex-row {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: stretch;
+  align-content: stretch;
+  margin: 0 7.25vw; 
+}
+.flex-header {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: flex-start;
+  align-content: flex-start;
+  margin: 0 7.25vw; 
+}
+.flex-column {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   align-content: stretch;
+  align-items: stretch;
   justify-content: center;
 }
 .text-item {
@@ -112,40 +124,122 @@ h1 {
 .full-flex {
   width: 100%;
 }
+
+.nav-item {
+	align-self: stretch;
+  	flex-basis: auto;
+  	font-family: 'Inconsolata', 'Lato', sans-serif;
+  	color: #999;
+  	font-size: 1.25em;
+  	padding: 1.5vh 5vw;
+  	text-decoration: none;
+}
+//(330deg, #e05252 0%, #99e052 25%, #52e0e0 50%, #9952e0 75%, #e05252 100%);
+.nav-item:nth-child(1) {
+	background: adjust-color(#9952e0, $hue: 0deg,  $lightness: 0, $alpha: -.75);
+	border-bottom: 5px solid adjust-color(#9952e0, $hue: 0deg,  $lightness: 25);
+}
+.nav-item:nth-child(2) {
+	background: adjust-color(#9952e0, $hue: 30deg,  $lightness: 0, $alpha: -.75);
+	border-bottom: 5px solid adjust-color(#9952e0, $hue: 40deg,  $lightness: 25);
+}
+.nav-item:nth-child(3) {
+	background: adjust-color(#9952e0, $hue: 60deg,  $lightness: 0, $alpha: -.75);
+	border-bottom: 5px solid adjust-color(#9952e0, $hue: 80deg,  $lightness: 25);
+}
+.nav-item:nth-child(4) {
+	background: adjust-color(#9952e0, $hue: 90deg,  $lightness: 0, $alpha: -.75);
+	border-bottom: 5px solid adjust-color(#9952e0, $hue: 120deg,  $lightness: 25);
+}
+.nav-item:nth-child(5) {
+	background: adjust-color(#9952e0, $hue: 120deg,  $lightness: 0, $alpha: -.75);
+	border-bottom: 5px solid adjust-color(#9952e0, $hue: 160deg,  $lightness: 25);
+}
+.nav-item:nth-child(1):hover {
+	//background: adjust-color(#9952e0, $hue: 0deg,  $lightness: 10, $alpha: -.75);
+	border-bottom: 5px solid adjust-color(#9952e0, $hue: 0deg,  $lightness: -10);
+}
+.nav-item:nth-child(2):hover {
+	//background: adjust-color(#9952e0, $hue: 30deg,  $lightness: 10, $alpha: -.75);
+	border-bottom: 5px solid adjust-color(#9952e0, $hue: 40deg,  $lightness: -10);
+}
+.nav-item:nth-child(3):hover {
+	//background: adjust-color(#9952e0, $hue: 60deg,  $lightness: 10, $alpha: -.75);
+	border-bottom: 5px solid adjust-color(#9952e0, $hue: 80deg,  $lightness: -10);
+}
+.nav-item:nth-child(4):hover {
+	//background: adjust-color(#9952e0, $hue: 90deg,  $lightness: 10, $alpha: -.75);
+	border-bottom: 5px solid adjust-color(#9952e0, $hue: 120deg,  $lightness: -10);
+}
+.nav-item:nth-child(5):hover {
+	//background: adjust-color(#9952e0, $hue: 120deg,  $lightness: 10, $alpha: -.75);
+	border-bottom: 5px solid adjust-color(#9952e0, $hue: 160deg,  $lightness: -10);
+}
+.nav-item:nth-child(1):active {
+	background: adjust-color(#9952e0, $hue: 0deg,  $lightness: -20, $alpha: -.85);
+	border-bottom: 5px solid adjust-color(#9952e0, $hue: 0deg,  $lightness: -10);
+	color: #efefef; //adjust-color(#9952e0, $hue: 0deg,  $lightness: 30);
+}
+.nav-item:nth-child(2):active {
+	background: adjust-color(#9952e0, $hue: 30deg,  $lightness: -20, $alpha: -.85);
+	border-bottom: 5px solid adjust-color(#9952e0, $hue: 40deg,  $lightness: -10);
+	color: #efefef;
+}
+.nav-item:nth-child(3):active {
+	background: adjust-color(#9952e0, $hue: 60deg,  $lightness: -20, $alpha: -.85);
+	border-bottom: 5px solid adjust-color(#9952e0, $hue: 80deg,  $lightness: -10);
+	color: #efefef;
+}
+.nav-item:nth-child(4):active {
+	background: adjust-color(#9952e0, $hue: 90deg,  $lightness: -20, $alpha: -.85);
+	border-bottom: 5px solid adjust-color(#9952e0, $hue: 120deg,  $lightness: -10);
+	color: #efefef;
+}
+.nav-item:nth-child(5):active {
+	background: adjust-color(#9952e0, $hue: 120deg,  $lightness: -20, $alpha: -.85);
+	border-bottom: 5px solid adjust-color(#9952e0, $hue: 160deg,  $lightness: -10);
+	color: #efefef;
+}
+
+
 .item {
   /*height: 50px;*/
   margin: 5px;
-  border: 5px solid DeepSkyBlue;
-  color: white;
-  text-align: center;
+  border: 5px solid $base-border-color;
+  font-family: 'Inconsolata', 'Lato', sans-serif;
+  color: #999;
+  font-size: 1.2vw;
+  text-align: left;
+  padding: 0 1vw;
   line-height: 50px;
-  font-weight: 600;
+  font-weight: 400;
   width: 13%;
+  min-height: 100px;
+  align-self: stretch;
+  flex-basis: auto;
   //height: 30em;
 }
-$item-background: hsla($hue: 190deg, $saturation: 50, $lightness: 50, $alpha: 0.5);
-$item-border-color: hsla($hue: 280deg, $saturation: 50, $lightness: 50, $alpha: 0.5);
-$item-border-width: 5px;
-$hue-amount: 20;
-
-.item:nth-child(1) {
-  order: 1;
-  flex: 1 1 auto;
-  background: $item-background;
-  border: $item-border-width solid adjust-color($item-border-color, $hue: 20deg);
+.item:nth-child(3n+1) {
+  flex: 1 3 auto;
+  width: 13%;
+  align-self: flex-end;
+  background: adjust-color(#e05252, $hue: 40deg, $lightness: -5, $alpha: -.75); 
+  border: $item-border-width solid adjust-color($base-border-color, $hue: 20deg);
 }
-.item:nth-child(2) {
-  order: 2;
-  flex: 1 1 auto;
-  background: lightgreen;
+.item:nth-child(3n+2) {
+  flex: 2 2 auto;
+  width: 20%;
+  background: adjust-color(#52e0e0, $hue: 0deg,  $lightness: -15, $alpha: -.75); 
+  border: $item-border-width solid adjust-color($base-border-color, $hue: 40deg);
 }
 
-.item:nth-child(3) {
-  order: 3;
-  flex: 1 1 auto;
-  background: lightgreen;
+.item:nth-child(3n+3) {
+  flex: 3 1 auto;
+  width: 30%;
+  background: adjust-color(#9952e0, $hue: 0deg,  $lightness: 0, $alpha: -.75); 
+  border: $item-border-width solid adjust-color($base-border-color, $hue: 60deg);
 }
-
+/*
 .item:nth-child(4) {
   order: 4;
   flex: 0 2 auto;
@@ -155,10 +249,11 @@ $hue-amount: 20;
 .item:nth-child(5) {
   order: 5;
   flex: 1 1 auto;
-  align-self: flex-start;
+  align-self: auto;
+  flex-basis: auto;
   background: rgba(255,255,255,0.1);
 }
-
+*/
 
 
 
