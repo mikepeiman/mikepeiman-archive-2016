@@ -22,7 +22,7 @@ body {
 	text-align: center;
 }
 h1 {
-	font-family:  'Neuton', 'Lobster Two', 'Arapey', 'Alegreya Sans', 'Cinzel Decorative', sans-serif;
+	font-family:  'Neuton', 'Bitter', 'Lobster Two', 'Arapey', 'Alegreya Sans', 'Cinzel Decorative', sans-serif;
 	font-weight: 700;
 	font-size: 5em;
 	color: white;
@@ -30,58 +30,62 @@ h1 {
 h2 {
   	font-size: 5em;
 	color: white;
-	font-family: 'Lato', 'Josefin Sans', 'Bitter', 'Inconsolata', sans-serif;
+	font-family: 'Alegreya Sans', 'Arapey','Josefin Sans', 'Bitter', 'Inconsolata', 'Lato',   sans-serif;
 	align-self: center;
 	font-weight: 400;
 }
 h3 {
-	font-size: 1.5vw;
+	font-size: 2vh;
 	color: #999;
 	font-family:  'Inconsolata', sans-serif;
 	align-self: center;
 	font-weight: 400;
 }
 .mike-peiman {
-	font-size: 7.5vw;
-	color: #e0eaef;
-    text-shadow: 0px 0px 10px #9952e0;
-    align-self: flex-start;
-    margin-top: 0.75em;
+	font-size: 10vh;
+	color: rgba(0,0,0,0.93);
+	-webkit-text-stroke: 2px #222;
+    text-shadow: -2px 3px 1px #888;
+  	text-align: center;
+    margin-top: 8vw;
     margin-bottom: 0;
+    width: 100%;
 }
 .hero-h2 {
-  background: #ccc; //linear-gradient(330deg, #e05252 0%, #99e052 25%, #52e0e0 50%, #9952e0 75%, #e05252 100%);
+  background: linear-gradient(330deg, #301B97 0%, #971B97 20%, #971B30 40%, #976E1B 60%, #59971B 80%, #301B97 100%);//linear-gradient(330deg, #4125CC 0%, #CC25CC 20%, #CC2541 40%, #CC9425 60%, #78CC25 80%, #4125CC 100%);//linear-gradient(330deg, #e05252 0%, #99e052 25%, #52e0e0 50%, #9952e0 75%, #e05252 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 3.75vw;
+  font-size: 6vh;
+  padding-bottom: 8vw;
+  align-self: stretch;
+  width: 100%;
+  text-align: center;
+  //-webkit-text-stroke: 2.5px rgba(0,0,0,0.95);
+  //text-shadow: 1px 1px 1px rgba(0,0,0,0.47);
 }
 .sexy-line { 
     margin: 0;
     height: 15px;
-    background: #52e0e0; //linear-gradient(330deg, #e05252 0%, #99e052 25%, #52e0e0 50%, #9952e0 75%, #e05252 100%);
+    background: linear-gradient(330deg, #e05252 0%, #99e052 25%, #52e0e0 50%, #9952e0 75%, #e05252 100%);
     margin-bottom: 1.5em;
 }
-@media only screen and (max-width: 480px) {
-  .mike-peiman {
-    font-size: 12vw;
-  }
-  .hero-h2 {
-    font-size: 7.25vw;
-    margin-bottom: 10vh;
-  }
-  .nav-item {
-  	width: 100%;
-  }
-  .flex-topnav {
-  	flex-wrap: wrap;
-  }
+.nav-item {
+	align-self: stretch;
+  	flex-basis: auto;
+  	font-family: 'Inconsolata', 'Lato', sans-serif;
+  	color: #999;
+  	font-size: 1.25em;
+  	padding: 1.5vh 5vw;
+  	text-decoration: none;
+  	width: 20%;
+  	text-align: center;
 }
-
 .section {
-	background: adjust-color($base-background-color, $hue: 0deg, $saturation: -50%, $lightness: -10);
+	background: adjust-color(#9952e0, $hue: -20deg,  $lightness: -55, $alpha: -.5);
 	color: adjust-color($base-font-color, $lightness: -20);
-	border-top: 15px solid adjust-color($base-border-color, $alpha: -.05);
-	padding-top: 1.5vh;
+	border-top: solid 2px $base-border-color;
+	border-image: linear-gradient(330deg, #301B97 0%, #971B97 20%, #971B30 40%, #976E1B 60%, #59971B 80%, #301B97 100%);//linear-gradient(330deg, #4125CC 0%, #CC25CC 20%, #CC2541 40%, #CC9425 60%, #78CC25 80%, #4125CC 100%);//15px solid adjust-color($base-border-color, $hue: -20deg,  $lightness: -5, $alpha: -.55);
+	border-image-slice: 1;
 }
 .flex-topnav {
   display: flex;
@@ -123,80 +127,72 @@ h3 {
   width: 100%;
 }
 
-.nav-item {
-	align-self: stretch;
-  	flex-basis: auto;
-  	font-family: 'Inconsolata', 'Lato', sans-serif;
-  	color: #999;
-  	font-size: 1.25em;
-  	padding: 1.5vh 5vw;
-  	text-decoration: none;
-}
+
 //(330deg, #e05252 0%, #99e052 25%, #52e0e0 50%, #9952e0 75%, #e05252 100%);
 .nav-item:nth-child(1) {
-	background: adjust-color(#9952e0, $hue: 0deg,  $lightness: 0, $alpha: -.75);
-	border-bottom: 5px solid adjust-color(#9952e0, $hue: 0deg,  $lightness: 25);
+	//background: adjust-color(#9952e0, $hue: 0deg,  $saturation: -100, $lightness: 0, $alpha: -.75);
+	border-bottom: 2px solid adjust-color(#9952e0, $hue: -20deg,  $lightness: -25);
 }
 .nav-item:nth-child(2) {
-	background: adjust-color(#9952e0, $hue: 30deg,  $lightness: 0, $alpha: -.75);
-	border-bottom: 5px solid adjust-color(#9952e0, $hue: 40deg,  $lightness: 25);
+	//background: adjust-color(#9952e0, $hue: 30deg, $saturation: -100, $lightness: 0, $alpha: -.75);
+	border-bottom: 2px solid adjust-color(#9952e0, $hue: 30deg,  $lightness: -25);
 }
 .nav-item:nth-child(3) {
-	background: adjust-color(#9952e0, $hue: 60deg,  $lightness: 0, $alpha: -.75);
-	border-bottom: 5px solid adjust-color(#9952e0, $hue: 80deg,  $lightness: 25);
+	//background: adjust-color(#9952e0, $hue: 60deg,  $saturation: -100, $lightness: 0, $alpha: -.75);
+	border-bottom: 2px solid adjust-color(#9952e0, $hue: 80deg,  $lightness: -25);
 }
 .nav-item:nth-child(4) {
-	background: adjust-color(#9952e0, $hue: 90deg,  $lightness: 0, $alpha: -.75);
-	border-bottom: 5px solid adjust-color(#9952e0, $hue: 120deg,  $lightness: 25);
+	//background: adjust-color(#9952e0, $hue: 90deg,  $saturation: -100, $lightness: 0, $alpha: -.75);
+	border-bottom: 2px solid adjust-color(#9952e0, $hue: 130deg,  $lightness: -25);
 }
 .nav-item:nth-child(5) {
-	background: adjust-color(#9952e0, $hue: 120deg,  $lightness: 0, $alpha: -.75);
-	border-bottom: 5px solid adjust-color(#9952e0, $hue: 160deg,  $lightness: 25);
+	//background: adjust-color(#9952e0, $hue: 120deg,  $saturation: -100, $lightness: 0, $alpha: -.75);
+	border-bottom: 2px solid adjust-color(#9952e0, $hue: 180deg,  $lightness: -25);
 }
 .nav-item:nth-child(1):hover {
-	//background: adjust-color(#9952e0, $hue: 0deg,  $lightness: 10, $alpha: -.75);
-	border-bottom: 5px solid adjust-color(#9952e0, $hue: 0deg,  $lightness: -10);
+	background: adjust-color(#9952e0, $hue: 0deg, $saturation: 100, $lightness: 10, $alpha: -.75);
+	border-bottom: 2px solid adjust-color(#9952e0, $hue: 0deg,  $lightness: -10);
 }
 .nav-item:nth-child(2):hover {
-	//background: adjust-color(#9952e0, $hue: 30deg,  $lightness: 10, $alpha: -.75);
-	border-bottom: 5px solid adjust-color(#9952e0, $hue: 40deg,  $lightness: -10);
+	background: adjust-color(#9952e0, $hue: 30deg, $saturation: 0, $lightness: 10, $alpha: -.75);
+	border-bottom: 2px solid adjust-color(#9952e0, $hue: 40deg,  $lightness: -10);
 }
 .nav-item:nth-child(3):hover {
-	//background: adjust-color(#9952e0, $hue: 60deg,  $lightness: 10, $alpha: -.75);
-	border-bottom: 5px solid adjust-color(#9952e0, $hue: 80deg,  $lightness: -10);
+	background: adjust-color(#9952e0, $hue: 60deg, $saturation: 0, $lightness: 10, $alpha: -.75);
+	border-bottom: 2px solid adjust-color(#9952e0, $hue: 80deg,  $lightness: -10);
 }
 .nav-item:nth-child(4):hover {
-	//background: adjust-color(#9952e0, $hue: 90deg,  $lightness: 10, $alpha: -.75);
-	border-bottom: 5px solid adjust-color(#9952e0, $hue: 120deg,  $lightness: -10);
+	background: adjust-color(#9952e0, $hue: 90deg,  $lightness: 10, $alpha: -.75);
+	border-bottom: 2px solid adjust-color(#9952e0, $hue: 120deg,  $lightness: -10);
 }
 .nav-item:nth-child(5):hover {
-	//background: adjust-color(#9952e0, $hue: 120deg,  $lightness: 10, $alpha: -.75);
-	border-bottom: 5px solid adjust-color(#9952e0, $hue: 160deg,  $lightness: -10);
+	background: adjust-color(#9952e0, $hue: 120deg,  $lightness: 10, $alpha: -.75);
+	border-bottom: 2px solid adjust-color(#9952e0, $hue: 160deg,  $lightness: -10);
 }
 .nav-item:nth-child(1):active {
 	background: adjust-color(#9952e0, $hue: 0deg,  $lightness: -20, $alpha: -.85);
 	border-bottom: 5px solid adjust-color(#9952e0, $hue: 0deg,  $lightness: -10);
-	color: #efefef; //adjust-color(#9952e0, $hue: 0deg,  $lightness: 30);
+	color: #d9d9d9; //adjust-color(#9952e0, $hue: 0deg,  $lightness: 30);
 }
 .nav-item:nth-child(2):active {
 	background: adjust-color(#9952e0, $hue: 30deg,  $lightness: -20, $alpha: -.85);
 	border-bottom: 5px solid adjust-color(#9952e0, $hue: 40deg,  $lightness: -10);
-	color: #efefef;
+	color: #d9d9d9;
 }
 .nav-item:nth-child(3):active {
 	background: adjust-color(#9952e0, $hue: 60deg,  $lightness: -20, $alpha: -.85);
 	border-bottom: 5px solid adjust-color(#9952e0, $hue: 80deg,  $lightness: -10);
-	color: #efefef;
+	color: #d9d9d9;
 }
 .nav-item:nth-child(4):active {
 	background: adjust-color(#9952e0, $hue: 90deg,  $lightness: -20, $alpha: -.85);
 	border-bottom: 5px solid adjust-color(#9952e0, $hue: 120deg,  $lightness: -10);
-	color: #efefef;
+	color: #d9d9d9;
 }
 .nav-item:nth-child(5):active {
 	background: adjust-color(#9952e0, $hue: 120deg,  $lightness: -20, $alpha: -.85);
 	border-bottom: 5px solid adjust-color(#9952e0, $hue: 160deg,  $lightness: -10);
-	color: #efefef;
+	color: #d9d9d9;
 }
 
 
@@ -221,21 +217,21 @@ h3 {
   flex: 1 3 auto;
   width: 13%;
   align-self: flex-end;
-  background: adjust-color(#e05252, $hue: 40deg, $lightness: -5, $alpha: -.75); 
-  border: $item-border-width solid adjust-color($base-border-color, $hue: 20deg);
+  background: adjust-color(#e05252, $hue: 40deg, $lightness: -5, $alpha: -.95); 
+  border: $item-border-width solid adjust-color($base-border-color, $hue: 20deg, $alpha: -.65);
 }
 .item:nth-child(3n+2) {
   flex: 2 2 auto;
   width: 20%;
-  background: adjust-color(#52e0e0, $hue: 0deg,  $lightness: -15, $alpha: -.75); 
-  border: $item-border-width solid adjust-color($base-border-color, $hue: 40deg);
+  background: adjust-color(#52e0e0, $hue: 0deg,  $lightness: -15, $alpha: -.95); 
+  border: $item-border-width solid adjust-color($base-border-color, $hue: 40deg, $alpha: -.65);
 }
 
 .item:nth-child(3n+3) {
   flex: 3 1 auto;
   width: 30%;
-  background: adjust-color(#9952e0, $hue: 0deg,  $lightness: 0, $alpha: -.75); 
-  border: $item-border-width solid adjust-color($base-border-color, $hue: 60deg);
+  background: adjust-color(#9952e0, $hue: 0deg,  $lightness: 0, $alpha: -.95); 
+  border: $item-border-width solid adjust-color($base-border-color, $hue: 60deg, $alpha: -.65);
 }
 /*
 .item:nth-child(4) {
@@ -253,5 +249,57 @@ h3 {
 }
 */
 
-
+@media only screen and (max-width: 580px) {
+  .mike-peiman {
+  	font-size: 6.5vh;
+  	margin-top: 7.5vh; 
+  }
+  .hero-h2 {
+    font-size: 3vh;
+    margin-bottom: 5vh;
+    background: #aaa;//linear-gradient(330deg, #301B97 0%, #971B97 20%, #971B30 40%, #976E1B 60%, #59971B 80%, #301B97 100%);//linear-gradient(330deg, #4125CC 0%, #CC25CC 20%, #CC2541 40%, #CC9425 60%, #78CC25 80%, #4125CC 100%);//linear-gradient(330deg, #e05252 0%, #99e052 25%, #52e0e0 50%, #9952e0 75%, #e05252 100%);
+ 	-webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;
+  }
+  .flex-topnav {
+  	diplay: inline-block;
+  	width: 100%;
+  	flex-wrap: wrap;
+  	justify-content: center;
+  }
+  .nav-item {
+  	padding: 1vh 0vh;
+  	margin: 0;
+  	width: 33%;
+  }
+  .item {
+  	padding: 0;
+  	margin: .25em;
+  	font-size: 2vh;
+  	text-align: center;
+  }
+}
+@media only screen and (min-width: 1080px) {
+  .mike-peiman {
+  	font-size: 14vh;
+  	margin-top: 16vh;
+  }
+  .hero-h2 {
+    font-size: 7vh;
+    margin-bottom: 6vh;
+    background: linear-gradient(330deg, #301B97 0%, #971B97 20%, #971B30 40%, #976E1B 60%, #59971B 80%, #301B97 100%);//linear-gradient(330deg, #4125CC 0%, #CC25CC 20%, #CC2541 40%, #CC9425 60%, #78CC25 80%, #4125CC 100%);//linear-gradient(330deg, #e05252 0%, #99e052 25%, #52e0e0 50%, #9952e0 75%, #e05252 100%);
+ 	-webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;
+  }
+  .flex-topnav {
+  	diplay: inline-block;
+  	width: 100%;
+  	flex-wrap: wrap;
+  	justify-content: center;
+  }
+  .nav-item {
+  	padding: 2vh 1vh;
+  	width: 17.5%;
+  }
+}
 
