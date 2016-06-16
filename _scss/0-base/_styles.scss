@@ -3,7 +3,7 @@ $base-font-color: #ddeeff;
 $base-border-color: #3399ff;
 $item-background: hsla($hue: 190deg, $saturation: 50, $lightness: 50, $alpha: 0.5);
 $item-border-color: hsla($hue: 280deg, $saturation: 50, $lightness: 50, $alpha: 0.5);
-$item-border-width: 5px;
+$item-border-width: 2px;
 $hue-amount: 20;
 $grad: linear-gradient(330deg, #e05252 0%, #99e052 25%, #52e0e0 50%, #9952e0 75%, #e05252 100%);
 
@@ -40,6 +40,11 @@ h3 {
 	font-family:  'Inconsolata', sans-serif;
 	align-self: center;
 	font-weight: 400;
+}
+.button {
+	width: 5vw;
+	background: #fff;
+	height: 5vh;
 }
 .mike-peiman {
 	font-size: 10vh;
@@ -81,7 +86,7 @@ h3 {
   	text-align: center;
 }
 .section {
-	background: adjust-color(#9952e0, $hue: -20deg,  $lightness: -55, $alpha: -.5);
+	background: adjust-color(#9952e0, $saturation: -100,  $lightness: -65, $alpha: -.25);
 	color: adjust-color($base-font-color, $lightness: -20);
 	border-top: solid 2px $base-border-color;
 	border-image: linear-gradient(330deg, #301B97 0%, #971B97 20%, #971B30 40%, #976E1B 60%, #59971B 80%, #301B97 100%);//linear-gradient(330deg, #4125CC 0%, #CC25CC 20%, #CC2541 40%, #CC9425 60%, #78CC25 80%, #4125CC 100%);//15px solid adjust-color($base-border-color, $hue: -20deg,  $lightness: -5, $alpha: -.55);
@@ -125,6 +130,45 @@ h3 {
 }
 .full-flex {
   width: 100%;
+}
+
+.item {
+  /*height: 50px;*/
+  margin: 5px;
+  border: 5px solid $base-border-color;
+  font-family: 'Inconsolata', 'Lato', sans-serif;
+  color: #999;
+  font-size: 1.2vw;
+  text-align: left;
+  padding: 0 1vw;
+  line-height: 50px;
+  font-weight: 400;
+  width: 13%;
+  min-height: 100px;
+  align-self: stretch;
+  flex-basis: auto;
+  //height: 30em;
+}
+.item-img {
+	width: 100%;
+	border: 1px solid #3399ff;
+	min-height: 5vh;
+	height: 15vh;
+}
+.item-header {
+	width: 100%;
+	font-size: 4vh;
+}
+item.h3 {
+	font-size: 4vw;
+}
+.item-text {
+	width: 85%;
+	font-size: 2vh;
+	line-height: 2.2vh;
+}
+.item-button {
+
 }
 
 
@@ -196,42 +240,38 @@ h3 {
 }
 
 
-.item {
-  /*height: 50px;*/
-  margin: 5px;
-  border: 5px solid $base-border-color;
-  font-family: 'Inconsolata', 'Lato', sans-serif;
-  color: #999;
-  font-size: 1.2vw;
-  text-align: left;
-  padding: 0 1vw;
-  line-height: 50px;
-  font-weight: 400;
-  width: 13%;
-  min-height: 100px;
-  align-self: stretch;
-  flex-basis: auto;
-  //height: 30em;
-}
-.item:nth-child(3n+1) {
-  flex: 1 3 auto;
+//linear-gradient(330deg, #301B97 0%, #971B97 20%, #971B30 40%, #976E1B 60%, #59971B 80%, #301B97 100%);
+.item:nth-child(5n+1) {
+  flex: 1 5 auto;
   width: 13%;
   align-self: flex-end;
-  background: adjust-color(#e05252, $hue: 40deg, $lightness: -5, $alpha: -.95); 
-  border: $item-border-width solid adjust-color($base-border-color, $hue: 20deg, $alpha: -.65);
+  //background: adjust-color(#e05252, $hue: 40deg, $lightness: -5, $alpha: -.95); 
+  border: $item-border-width solid adjust-color(#301B97, $alpha: -.65);
 }
-.item:nth-child(3n+2) {
-  flex: 2 2 auto;
+.item:nth-child(5n+2) {
+  flex: 2 4 auto;
   width: 20%;
-  background: adjust-color(#52e0e0, $hue: 0deg,  $lightness: -15, $alpha: -.95); 
-  border: $item-border-width solid adjust-color($base-border-color, $hue: 40deg, $alpha: -.65);
+  //background: adjust-color(#52e0e0, $hue: 0deg,  $lightness: -15, $alpha: -.95); 
+  border: $item-border-width solid adjust-color(#971B97, $alpha: -.65);
 }
 
-.item:nth-child(3n+3) {
-  flex: 3 1 auto;
+.item:nth-child(5n+3) {
+  flex: 3 3 auto;
   width: 30%;
-  background: adjust-color(#9952e0, $hue: 0deg,  $lightness: 0, $alpha: -.95); 
-  border: $item-border-width solid adjust-color($base-border-color, $hue: 60deg, $alpha: -.65);
+  //background: adjust-color(#9952e0, $hue: 0deg,  $lightness: 0, $alpha: -.95); 
+  border: $item-border-width solid adjust-color(#971B30, $alpha: -.65);
+}
+.item:nth-child(5n+4) {
+  flex: 4 2 auto;
+  width: 30%;
+  //background: adjust-color(#9952e0, $hue: 0deg,  $lightness: 0, $alpha: -.95); 
+  border: $item-border-width solid adjust-color(#976E1B, $alpha: -.65);
+}
+.item:nth-child(5n+5) {
+  flex: 5 1 auto;
+  width: 30%;
+  //background: adjust-color(#9952e0, $hue: 0deg,  $lightness: 0, $alpha: -.95); 
+  border: $item-border-width solid adjust-color(#59971B, $alpha: -.65);
 }
 /*
 .item:nth-child(4) {
