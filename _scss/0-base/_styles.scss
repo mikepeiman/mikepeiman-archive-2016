@@ -45,23 +45,21 @@ h3 {
 	font-size: 7.5vw;
 	color: #e0eaef;
     text-shadow: 0px 0px 10px #9952e0;
-    align-self: center;
+    align-self: flex-start;
     margin-top: 0.75em;
     margin-bottom: 0;
 }
 .hero-h2 {
-  background: linear-gradient(330deg, #e05252 0%, #99e052 25%, #52e0e0 50%, #9952e0 75%, #e05252 100%);
+  background: #ccc; //linear-gradient(330deg, #e05252 0%, #99e052 25%, #52e0e0 50%, #9952e0 75%, #e05252 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 3.75vw;
-  margin-bottom: 2.25em;
-  border-bottom: 5px solid $grad;
 }
 .sexy-line { 
     margin: 0;
-    height: 5px;
-    background: black;
-    background: linear-gradient(90deg, #e05252 0%, #99e052 25%, #52e0e0 50%, #9952e0 75%, #e05252 100%);
+    height: 15px;
+    background: #52e0e0; //linear-gradient(330deg, #e05252 0%, #99e052 25%, #52e0e0 50%, #9952e0 75%, #e05252 100%);
+    margin-bottom: 1.5em;
 }
 @media only screen and (max-width: 480px) {
   .mike-peiman {
@@ -79,11 +77,11 @@ h3 {
   }
 }
 
-section {
-	background: adjust-color($base-background-color, $hue: 30deg, $lightness: 50);
+.section {
+	background: adjust-color($base-background-color, $hue: 0deg, $saturation: -50%, $lightness: -10);
 	color: adjust-color($base-font-color, $lightness: -20);
-	border: 5px solid #333;
-	padding: 1em;
+	border-top: 15px solid adjust-color($base-border-color, $alpha: -.05);
+	padding-top: 1.5vh;
 }
 .flex-topnav {
   display: flex;
