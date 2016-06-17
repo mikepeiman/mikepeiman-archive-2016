@@ -39,12 +39,14 @@ h3 {
 .mike-peiman {
   font-size: 10vh;
   color: rgba(0, 0, 0, 0.93);
-  -webkit-text-stroke: 2px #222;
-  text-shadow: -2px 3px 1px #888;
+  -webkit-text-stroke: 2px #777;
   text-align: center;
   margin-top: 8vw;
   margin-bottom: 0;
-  width: 100%; }
+  width: 100%;
+  background: linear-gradient(330deg, #301B97 0%, #971B97 20%, #971B30 40%, #976E1B 55%, #59971B 70%, #301B97 85%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(0, 0, 0, 0.75); }
 
 .hero-h2 {
   background: linear-gradient(330deg, #301B97 0%, #971B97 20%, #971B30 40%, #976E1B 60%, #59971B 80%, #301B97 100%);
@@ -130,19 +132,20 @@ h3 {
   padding: 0 1vw;
   line-height: 50px;
   font-weight: 400;
-  width: 13%;
+  min-width: 20%;
   min-height: 100px;
   align-self: stretch;
   flex-basis: auto; }
 
 .item-img {
-  width: 100%;
-  border: 1px solid #3399ff;
+  width: 95%;
+  border: 1px solid rgba(50, 150, 255, 0.25);
   min-height: 5vh;
-  height: 15vh; }
+  height: 15vh;
+  flex: 1 0 auto; }
 
 .item-header {
-  width: 100%;
+  width: 85%;
   font-size: 4vh; }
 
 item.h3 {
@@ -151,7 +154,14 @@ item.h3 {
 .item-text {
   width: 85%;
   font-size: 2vh;
-  line-height: 2.2vh; }
+  line-height: 2.2vh;
+  overflow: hidden;
+  flex-basis: 150px; }
+
+.item-button {
+  background: rgba(108, 78, 19, 0.5);
+  border-bottom: 2px solid #dca73c;
+  color: #d9d9d9; }
 
 .nav-item:nth-child(1) {
   border-bottom: 2px solid #301b97; }
@@ -169,74 +179,74 @@ item.h3 {
   border-bottom: 2px solid #59971b; }
 
 .nav-item:nth-child(1):hover {
-  background: rgba(178, 102, 255, 0.25);
-  border-bottom: 2px solid #7f27d8; }
+  background: rgba(22, 0, 127, 0.25);
+  border-bottom: 2px solid #3e23c2; }
 
 .nav-item:nth-child(2):hover {
-  background: rgba(232, 125, 232, 0.25);
-  border-bottom: 2px solid #d827bb; }
+  background: rgba(108, 19, 108, 0.25);
+  border-bottom: 2px solid #c223c2; }
 
 .nav-item:nth-child(3):hover {
-  background: rgba(232, 125, 179, 0.25);
-  border-bottom: 2px solid #d82744; }
+  background: rgba(108, 19, 34, 0.25);
+  border-bottom: 2px solid #c2233e; }
 
 .nav-item:nth-child(4):hover {
-  background: rgba(232, 125, 125, 0.25);
-  border-bottom: 2px solid #d88027; }
+  background: rgba(108, 78, 19, 0.25);
+  border-bottom: 2px solid #c28e23; }
 
 .nav-item:nth-child(5):hover {
-  background: rgba(232, 179, 125, 0.25);
-  border-bottom: 2px solid #bbd827; }
+  background: rgba(64, 108, 19, 0.25);
+  border-bottom: 2px solid #73c223; }
 
 .nav-item:nth-child(1):active {
-  background: rgba(102, 31, 173, 0.15);
-  border-bottom: 5px solid #7f27d8;
+  background: rgba(22, 0, 127, 0.5);
+  border-bottom: 2px solid #573cdc;
   color: #d9d9d9; }
 
 .nav-item:nth-child(2):active {
-  background: rgba(173, 31, 173, 0.15);
-  border-bottom: 5px solid #d827bb;
+  background: rgba(108, 19, 108, 0.5);
+  border-bottom: 2px solid #dc3cdc;
   color: #d9d9d9; }
 
 .nav-item:nth-child(3):active {
-  background: rgba(173, 31, 102, 0.15);
-  border-bottom: 5px solid #d82744;
+  background: rgba(108, 19, 34, 0.5);
+  border-bottom: 2px solid #dc3c57;
   color: #d9d9d9; }
 
 .nav-item:nth-child(4):active {
-  background: rgba(173, 31, 31, 0.15);
-  border-bottom: 5px solid #d88027;
+  background: rgba(108, 78, 19, 0.5);
+  border-bottom: 2px solid #dca73c;
   color: #d9d9d9; }
 
 .nav-item:nth-child(5):active {
-  background: rgba(173, 102, 31, 0.15);
-  border-bottom: 5px solid #bbd827;
+  background: rgba(64, 108, 19, 0.5);
+  border-bottom: 2px solid #8cdc3c;
   color: #d9d9d9; }
 
 .item:nth-child(5n+1) {
   flex: 1 5 auto;
-  width: 13%;
+  width: 30%;
   align-self: flex-end;
   border: 2px solid rgba(48, 27, 151, 0.35); }
 
 .item:nth-child(5n+2) {
   flex: 2 4 auto;
-  width: 20%;
+  width: 35%;
   border: 2px solid rgba(151, 27, 151, 0.35); }
 
 .item:nth-child(5n+3) {
   flex: 3 3 auto;
-  width: 30%;
+  width: 40%;
   border: 2px solid rgba(151, 27, 48, 0.35); }
 
 .item:nth-child(5n+4) {
   flex: 4 2 auto;
-  width: 30%;
+  width: 45%;
   border: 2px solid rgba(151, 110, 27, 0.35); }
 
 .item:nth-child(5n+5) {
   flex: 5 1 auto;
-  width: 30%;
+  width: 50%;
   border: 2px solid rgba(89, 151, 27, 0.35); }
 
 /*
@@ -279,7 +289,7 @@ item.h3 {
 
   .item {
     padding: 0;
-    margin: .25em;
+    margin: .25em 0em;
     font-size: 2vh;
     text-align: center; } }
 @media only screen and (min-width: 1080px) {
